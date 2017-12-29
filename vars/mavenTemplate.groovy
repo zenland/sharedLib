@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-def call(body) {
+def call(body, label) {
   podTemplate(label: label,
 //        containers: [containerTemplate(name: 'maven', image: 'maven', command: 'cat', ttyEnabled: true)],
 //        volumes: [secretVolume(secretName: 'maven-settings', mountPath: '/root/.m2'),

@@ -1,9 +1,6 @@
 #!/usr/bin/groovy
-def call(body) {
-  def config = [:]
-  body.resolveStrategy = Closure.DELEGATE_FIRST
-  body.delegate = config
-  podTemplate(label: config.label,
+def call(body, label="mypod") {
+  podTemplate(label: label,
 //        containers: [containerTemplate(name: 'maven', image: 'maven', command: 'cat', ttyEnabled: true)],
 //        volumes: [secretVolume(secretName: 'maven-settings', mountPath: '/root/.m2'),
 //                  persistentVolumeClaim(claimName: 'maven-local-repo', mountPath: '/root/.m2nrepo')]) {

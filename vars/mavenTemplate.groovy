@@ -1,5 +1,6 @@
 #!/usr/bin/groovy
-label="mypod"
+@groovy.transform.Field 
+String label="mypod"
 def call(body) {
   podTemplate(label: label,
 //        containers: [containerTemplate(name: 'maven', image: 'maven', command: 'cat', ttyEnabled: true)],

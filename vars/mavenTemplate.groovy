@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-def label
+label="mypod"
 def call(body) {
   podTemplate(label: label,
 //        containers: [containerTemplate(name: 'maven', image: 'maven', command: 'cat', ttyEnabled: true)],
